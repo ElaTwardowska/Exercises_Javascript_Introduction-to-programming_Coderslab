@@ -2,7 +2,7 @@
  * Created by Elatwardowska on 2016-01-09.
  */
 
-//console.log("Hello world");
+console.log("Hello world");
 
 
 /*
