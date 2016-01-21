@@ -323,96 +323,117 @@ document.write("<br>");
 document.write("<br>");
 
 //Zadanie 12
-//
-//var n=3;
-//for(i = 1; i <= n; i++) {
-//    for(j = 1; j <= n; j++) {
-//        document.write( i +" x "+ j + " = "+ (i * j)+ "&nbsp");
-//    }
-//    document.write("<br>");
-//}
+document.write("** Zadanie 12 **<br>");
+
+var n=3;
+for(i = 1; i <= n; i++) {
+    for(j = 1; j <= n; j++) {
+        document.write( i +" x "+ j + " = "+ (i * j)+ "&nbsp");
+    }
+    document.write("<br>");
+}
+document.write("<br>");
+document.write("<br>");
 
 //Zadanie 13
+document.write("** Zadanie 13 **<br>");
 
-//var x=15;
-//var FooBar = function(x){
-//    for(var i = 1; i <= x; i++) {
-//        if((i%3===0)&&(i%5===0)) {
-//            document.write("FOOBAR");
-//        }
-//        else if(i%3===0) {
-//            document.write("Foo")
-//        }
-//        else if (i%5===0){
-//            document.write("Bar");
-//        }
-//        else {
-//            document.write(i);
-//        }
-//    }
-//}
-//FooBar(x);
+var x=15;
+var FooBar = function(x){
+    for(var i = 1; i <= x; i++) {
+        if((i%3===0)&&(i%5===0)) {
+            document.write("FOOBAR");
+        }
+        else if(i%3===0) {
+            document.write("Foo")
+        }
+        else if (i%5===0){
+            document.write("Bar");
+        }
+        else {
+            document.write(i);
+        }
+    }
+}
+FooBar(x);
+document.write("<br>");
+document.write("<br>");
+
 
 //Zadanie 14
-//
-//var a = 2;
-//var n = 3;
-//var pow = function ( a, n) {
-//   if (n===0) {
-//       return 1;
-//   }
-//    else if (n===1) {
-//       return a;
-//   }
-//    else {
-//       var k = a;
-//       for (var i=1; i<n; i++) {
-//          k = k * a;
-//       }
-//       return k;
-//   }
-//}
-//document.write(pow(a,n));
-//
+document.write("** Zadanie 14 **<br>");
+
+var a=3;
+var n=3;
+var pow = function (a,n) {
+    if (a===0 && n===0) {
+        return NaN;
+    }
+    else if (n===0) {
+        return 1;
+    }
+    else if (n===1) {
+        return a;
+    }
+    else {
+        var k = a;
+        for (var i=1; i< n; i++) {
+          k=k*a;
+        }
+    }
+    return k;
+};
+document.write(pow(a,n));
+document.write("<br>");
+document.write("<br>");
+
+
+
 //Zadanie 15
-//var n=17;
-//var IsPrimeNr = function(n) {
-//    if (n <= 1) {
-//        return NaN;
-//    }
-//    var lastDiv = Math.floor(Math.sqrt(n));
-//
-//    for (var i = 2; i < lastDiv; i++) {
-//        if (n % i === 0) {
-//            return false;
-//        }
-//    }
-//    return true;
-//};
-//document.write(IsPrimeNr(n));
+document.write("** Zadanie 15 **<br>");
+
+var n=7;
+var IsPrimeNr = function(n) {
+    if (n <= 1) {
+        return NaN;
+    }
+    var lastDiv = Math.floor(Math.sqrt(n));
+
+    /* liczba 2 i 3 to liczby pierwsze */
+    if (lastDiv === 1) {
+        return true;
+    }
+    for (var i = 2; i <= lastDiv; i++) {
+        if (n % i === 0) {
+            return false;
+        }
+    }
+    return true;
+};
+document.write(IsPrimeNr(n));
+document.write("<br>");
+document.write("<br>");
 
 //zadanie 16
-
-//
-//var RandomResult = function() {
-//  var counter=0;
-//  for (;;) {
-//      counter = counter + 1;
-//
-//      if ((Math.floor(Math.random() * 21))!== 10) {
-//          document.write("zła liczba <br>");
-//      }
-//      else {
-//          document.write("Dobra liczba <br>");
-//          return counter;
-//      }
-//
-//  }
-//}
-//document.write(RandomResult());
+document.write("** Zadanie 16 **<br>");
 
 
-//
+var RandomResult = function() {
+  var counter=0;
+  for (;;) {
+      counter++;
+
+      if ((Math.floor(Math.random() * 21))!== 10) {
+          document.write("zła liczba <br>");
+      }
+      else {
+          document.write("Dobra liczba <br>");
+          return counter;
+      }
+
+  }
+}
+document.write(RandomResult());
 
 
 //
